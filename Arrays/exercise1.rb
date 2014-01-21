@@ -23,3 +23,8 @@ end
 def more_than_ten_2(array = [])
 	array.select {|x| x.is_a?(Numeric) && x > 10}
 end
+
+#solution 3
+def more_than_ten_3(array = [])
+	array.dup.delete_if {|x| !x_is_a?(Numeric) || x <= 10 }
+end
